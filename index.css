@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  background-color: #f9fafb;
+}
+
+.container {
+  background-color: #fff;
+  margin-top: 20px;
+  padding: 30px 40px;
+  width: 400px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 5px black;
+          box-shadow: 0 1px 5px black;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.form-control {
+  margin-bottom: 20px;
+  position: relative;
+  color: #8d848c;
+  font-weight: 600;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control small {
+  display: block;
+  margin-top: 5px;
+  visibility: hidden;
+}
+
+.form-control small.success {
+  color: #2ecc71;
+  visibility: visible;
+}
+
+.form-control small.error {
+  color: #e74c3c;
+  visibility: visible;
+}
+
+.form-control input {
+  width: 100%;
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 3px;
+  border: 2px solid #f0f0f0;
+}
+
+.form-control input.success {
+  border: 2px solid #2ecc71;
+  visibility: visible;
+}
+
+.form-control input.error {
+  border: 2px solid #e74c3c;
+  visibility: visible;
+}
+
+.form-control input:focus::-webkit-input-placeholder {
+  opacity: 0;
+}
+
+.form-control input:focus:-ms-input-placeholder {
+  opacity: 0;
+}
+
+.form-control input:focus::-ms-input-placeholder {
+  opacity: 0;
+}
+
+.form-control input:focus::placeholder {
+  opacity: 0;
+}
+
+.form-control input:focus {
+  outline: 0;
+  border: 2px solid #8d848c;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05em;
+}
+/*# sourceMappingURL=index.css.map */

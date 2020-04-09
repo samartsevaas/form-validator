@@ -1,0 +1,82 @@
+@import "colors";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-color: $body_background;
+}
+
+.container{
+    background-color: $form_background;
+    margin-top: 20px;
+    padding: 30px 40px;
+    width: 400px;
+    border-radius: 3px;
+    box-shadow: 0 1px 5px rgba(0,0,0,1);
+    & h1{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
+
+.form-control{
+    margin-bottom: 20px;
+    position: relative;
+    color: $head_color;
+    font-weight: 600;
+    & label{
+        display: block;
+    }
+    & small{
+        display: block;
+        margin-top: 5px;
+        visibility: hidden;
+        &.success{
+        color: $success;
+        visibility: visible;
+        }
+        &.error{
+        color: $error;
+        visibility: visible;
+        }
+    }
+    
+    & input{
+        width: 100%;
+        margin-top: 5px;
+        padding: 10px;
+        border-radius: 3px;
+        border: 2px solid $border_color;
+        &.success{
+        border: 2px solid $success;
+        visibility: visible;
+        }
+        &.error{
+        border: 2px solid $error;
+        visibility: visible;
+        }
+    }
+    & input:focus::placeholder{
+        opacity: 0;
+    }
+    & input:focus{
+        outline: 0;
+        border: 2px solid $head_color;
+    }
+}
+
+button{
+    width: 100%;
+    padding: 10px;
+    background-color: $button_color;
+    color: $text_standart_color;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.05em;
+}
