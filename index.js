@@ -25,32 +25,21 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
+function checkRequared(inputArr){
+    inputArr.forEach(function(input){
+        if(input.value.trim() ===''){
+            showError(input, `${input.id} is not require`);
+        }else if(!validateEmail(email.value)){
+            showError(email,`${input.id} is not valid`);
+        }
+        else{
+            showSuccess(input);
+        }
+    });
+}
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
-    if(username.value === ''){
-        showError(username, 'Username is required');
-    }else{
-        showSuccess(username);
-    }
 
-    if(email.value === ''){
-        showError(email, 'Email is required');
-    }else if(!validateEmail(email.value)){
-        showError(email, 'Email is not valid');
-    }else{
-        showSuccess(email);
-    }
-
-    if(password.value === ''){
-        showError(password, 'Password is required');
-    }else{
-        showSuccess(password);
-    }
-
-    if(password2.value === ''){
-        showError(password2, 'Password is similar');
-    }else{
-        showSuccess(password2);
-    }
+    checkRequared([username,email,password,password2]);
 })
