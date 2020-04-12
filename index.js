@@ -25,21 +25,32 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-function checkRequared(inputArr){
+function checkRequested(inputArr){
     inputArr.forEach(function(input){
-        if(input.value.trim() ===''){
-            showError(input, `${input.id} is not require`);
+        if(input.value.trim() === ''){
+            showError(input, `${input.id} is not required`);
         }else if(!validateEmail(email.value)){
-            showError(email,`${input.id} is not valid`);
-        }
-        else{
+            showError(email, `${email.id} is not valid`);
+        }else{
             showSuccess(input);
         }
-    });
+    })
+    function checkPassword(){
+        if(password.value !== password2.value){
+            showError(password, `${password.id} is not = ${password2.id}`);
+            showError(password2, `${password2.id} is not = ${password.id}`);
+        }else{
+            showSuccess(password);
+            showSuccess(password2);
+        }
+    }
+    checkPassword();
 }
+
+
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
-
-    checkRequared([username,email,password,password2]);
+    
+   checkRequested([username,email,password,password2]);
 })
