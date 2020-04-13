@@ -44,7 +44,19 @@ function checkRequested(inputArr){
             showSuccess(password2);
         }
     }
+
+    function validatePasswordlenght(){
+        const passValid = password.value;
+        if(passValid.length < 8){
+            showError(password, `${password.id} can be more than 8 characters`);
+            showError(password2, ``);
+        }else{
+            showSuccess(input);
+        }
+   
+    }
     checkPassword();
+    validatePasswordlenght();
 }
 
 
