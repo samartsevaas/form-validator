@@ -4,6 +4,7 @@ const email = document.getElementById('email');
 const password = document.getElementById('password');
 const password2 = document.getElementById('password2');
 
+
 function showError(input , message){
     const formControl = input.closest('.form-control');
     formControl.classList.remove('success');
@@ -28,8 +29,9 @@ function validateEmail(email) {
 function checkRequested(inputArr){
     inputArr.forEach(function(input){
         if(input.value.trim() === ''){
-            showError(input, `${input.id} is not required`);
-        }else if(!validateEmail(email.value)){
+            showError(input, `${input.id} is required`);
+            console.log(input);
+        }else if(!validateEmail(email.value) && input.id == 'email'){
             showError(email, `${email.id} is not valid`);
         }else{
             showSuccess(input);
